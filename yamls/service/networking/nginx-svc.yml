@@ -5,8 +5,9 @@ metadata:
   labels:
     run: my-nginx
 spec:
-  selector:
-    app: my-nginx
   ports:
   - port: 80
-    targetPort: TCP
+    protocol: TCP
+  selector:
+    run: my-nginx
+
